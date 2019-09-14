@@ -40,24 +40,58 @@ p.Print_list()
 q.Print_list()
 p = [1,2,3,4,5,6,7,8,9,10]
 q = [10,19,18,12,6,5,4,3,2,1]
-plt.xlabel('x axis')
-plt.ylabel('y axis')
-plt.title('visualization of points with the help of loop ')
-sns.stripplot(p,q,color='green')
-plt.show()
+# plt.xlabel('x axis')
+# plt.ylabel('y axis')
+# plt.title('visualization of points with the help of loop ')
+# sns.stripplot(p,q,color='green')
+# plt.show()
 
 # trying to read dataframe by making function
-import numpy as np
-import pandas as pd
-class DataShell():
-    # constructor
-    def __init__(self, filename):
-        self.filename = filename # attribute
-    # method
-    def create_datashell(self):
-        self.array = np.genfromtxt(self.filename, delimiter=',', dtype=None)
-        return self.array
-ourDataShell = DataShell('car.csv')
-ourDataShell.create_datashell()
+# import numpy as np
+# import pandas as pd
+# class DataShell():
+#     # constructor
+#     def __init__(self, filename):
+#         self.filename = filename # attribute
+#     # method
+#     def create_datashell(self):
+#         self.array = np.genfromtxt(self.filename, delimiter=',', dtype=None)
+#         return self.array
+# ourDataShell = DataShell('car.csv')
+# ourDataShell.create_datashell()
+
+# creating number with the help of inheritence
+class X(object):
+    def __init__(self,a):
+        self.num = a
+    def doubleup(self):
+        self.num *= 2
+
+    # using inheritence property now
+class y(X):
+    def __init__(self,a):
+        X.__init__(self,a)
+
+    def tripleup(self):
+        self.num *=3
+    def fourtimes(self):
+        self.num *=4
+object = y(4)
+print(object.num)
+object.doubleup()
+print(object.num)
+object.tripleup()
+print(object.num)
+object.fourtimes()
+print(object.num)
+L = [4,8,24,96]
+T = [5,10,15,20]
+plt.plot(L,T,color='red')
+plt.xlabel ('T points')
+plt.ylabel  ('L points')
+plt.title  ('plotting points with the help of inheritence property'.title())
+plt.grid()
+plt.show()
+    
 
 
