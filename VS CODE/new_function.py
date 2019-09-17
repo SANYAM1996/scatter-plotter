@@ -37,3 +37,29 @@ count = Addition(23,34,56,67)
 count.calculate()
 count.calculate1()
 count.display()
+
+# class and instance attributes in python
+class sampleclass():
+    # class attribute
+    count = 0   
+    def increase(self):
+        sampleclass.count += 1
+# calling increase on object
+sol = sampleclass()
+sol.increase()
+print (sol.count)
+# calling increase on one more
+# object
+tem = sampleclass()
+tem.increase()
+print (tem.count)
+
+oak = sampleclass()
+oak.increase()
+print (oak.count)
+
+kol = sampleclass()
+kol.increase()
+print(kol.count)
+
+# 1,2,3,4 are the required consecutive data points.
